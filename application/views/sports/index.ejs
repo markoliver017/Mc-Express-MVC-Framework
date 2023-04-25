@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sports Player</title>
+        <!-- css bootstrap  -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <!-- Javascript /jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $.get('/indexHtml', function(res) {
+                    $("#result").html(res);
+                });
+                $(document).on('submit','form', function(){
+                    event.preventDefault();
+                    $.post('/search', $(this).serialize(), function(res) {
+                        $('#result').html(res);
+                    });
+                    return false;
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container" >
+            <div class="row align-items-md-stretch">
+                <div class="col-4">
+                    <div class="h-150 p-5 text-white bg-dark rounded-3">
+                        <h1 class="text-info">Sports Players</h1>
+                        <form action="/search" method="post">
+                            <div class="form-group">
+                                <label class="col-form-label" for="search">Search Users</label>
+                                <input  class="form-control" type="search" name="name" value="" placeholder="Searh here">
+                            </div>
+                            <label class="col-form-label">Gender</label>
+                            <div class="form-check">
+                                <input class="form-check-input" name="gender[]" type="checkbox" value="Male" id="flexCheckDefault" >
+                                <label class="form-check-label" for="gender">Male</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" name="gender[]" type="checkbox" value="Female" id="flexCheckChecked">
+                                <label class="form-check-label" for="gender">Female</label>
+                            </div>
+                            <label class="col-form-label">Sports</label>
+<%  for(let i in sportsCategory) { %>
+                            <div class="form-check">
+                                <input class="form-check-input" name="sport[]" type="checkbox" value="<%=sportsCategory[i].sport%>" id="flexCheckDefault" >
+                                <label class="form-check-label" for="sport"><%=sportsCategory[i].sport%></label>
+                            </div>
+<%  }    %>
+                            <div class="form-group d-flex flex-row-reverse">
+                                <input class="btn btn-primary btn-sm" type="submit" value="Search">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-8" id="result">
+
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+div {
+    position: relative;
+}
+img {
+    width: 90%;
+    height: 100px;
+    object-fit: fill;
+}
+#error {
+    position: absolute;
+    right: 1px;
+    top: 10px;
+    display: none;
+    padding: 5px;
+    border: 1px solid;
+    z-index: 1;
+    border-radius: 5%;
+}
+#success {
+    position: absolute;
+    right: 1px;
+    top: 10px;
+    display: none;
+    padding: 5px;
+    border: 1px solid;
+    z-index: 1;
+    border-radius: 2%;
+}

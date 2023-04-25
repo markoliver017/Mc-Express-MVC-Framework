@@ -1,0 +1,11 @@
+
+        <div class="h-150 p-5 text-white text-center bg-dark rounded-3 row">
+            <p class="text-warning"><%= warning_message %></p>
+<%  for(let i in playersData) { %>
+            <div class="col-md-2 p-1 border rounded overflow-hidden">
+                <img src="<%=playersData[i].img_url%>" alt="<%=playersData[i].name%>" >
+                <p><%=playersData[i].name%></p>
+            </div>
+<%  }    %>
+        </div>
+
