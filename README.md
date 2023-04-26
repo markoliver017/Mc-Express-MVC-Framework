@@ -3,9 +3,9 @@ Mc Express MVC Framework
 This is an Express.js MVC framework for building web applications.
 *********************************************************************
 
-##################
-Folder Structure
-##################
+**********************************
+******  Folder Structure  ********
+**********************************
 ||application/configurations
      Database.js - database configurations
      Custom_Routes.js - This file lets you re-map URI requests to specific controller functions.
@@ -18,20 +18,24 @@ Folder Structure
 ||application/system - contains the application system, no need to modify anything on this folder
 ||app.js - contains the server of the framework.
 
-#########
-Features
-#########
+**********************
+*****  Features  *****
+**********************
     MVC architecture
     Node.js
     Express.js web framework
     EJS template engine
     MYSQL database
     Bootstrap CSS framework
-    Input validation and error handling
+    Form validation and error handling
+    Dynamic Routing
+    Auto-load Model and Controller
+    Flash Sessions
+    Profiler
 
-####################
-Instructions to Run
-###################
+**************************
+** Instructions to Run  **
+**************************
 Clone the repository
 Install dependencies using npm install
 Start the application using nodemon app.js
