@@ -27,7 +27,11 @@ Features
     EJS template engine
     MYSQL database
     Bootstrap CSS framework
-    Input validation and error handling
+    Form validation and error handling
+    Dynamic Routing
+    Auto-load Model and Controller
+    Flash Sessions
+    Profiler
 
 ####################
 Instructions to Run
