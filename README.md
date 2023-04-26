@@ -6,17 +6,18 @@ This is an Express.js MVC framework for building web applications.
 **********************************
 ******  Folder Structure  ********
 **********************************
-||application/configurations
-     Database.js - database configurations
-     Custom_Routes.js - This file lets you re-map URI requests to specific controller functions.
-     Main.js - This file is where you set your port, session , and have the options to autoload your model.
-||application/configurations/controllers - contains the application controllers
-||application/configurations/models - contains the application models 
-||application/configurations/views - contains the application views
-||application/configurations/helpers - contains the application helper. 'Form_Validation.js'
-||application/public - contains the application static files ex: .css | images | js needed on your views files.
-||application/system - contains the application system, no need to modify anything on this folder
-||app.js - contains the server of the framework.
+    application/configurations
+        -Database.js - database configurations
+        -Custom_Routes.js - This file lets you re-map URI requests to specific controller functions.
+        -Main.js - This file is where you set your port, session , and have the options to autoload your -model.
+    application/configurations/controllers - contains the application controllers
+    application/configurations/models - contains the application models 
+    application/configurations/views - contains the application views
+    application/configurations/helpers - contains the application helper.           
+        -Form_Validation.js
+    application/public - contains the application static files ex: .css | images | js needed on your views files.
+    application/system - contains the application system, no need to modify anything on this folder
+    app.js - contains the server of the framework.
 
 **********************
 *****  Features  *****
