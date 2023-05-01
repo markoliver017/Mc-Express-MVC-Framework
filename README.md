@@ -4,7 +4,7 @@ This is an Express.js MVC framework for building web applications.
 *********************************************************************
 
 **********************************
-******  Folder Structure  ********
+        Folder Structure
 **********************************
     application/configurations
         -Database.js - database configurations
@@ -19,9 +19,9 @@ This is an Express.js MVC framework for building web applications.
     application/system - contains the application system, no need to modify anything on this folder
     app.js - contains the server of the framework.
 
-**********************
-*****  Features  *****
-**********************
+***********************
+        Features
+***********************
     MVC architecture (Model, View, Controller)
     Dynamic Routing
     Auto-load Model and Controller
@@ -29,9 +29,9 @@ This is an Express.js MVC framework for building web applications.
     Flash Sessions
     Profiler
     
-**********************************
-*****  Tools | Technologies  *****
-**********************************
+***************************************
+        Tools | Technologies Used
+***************************************
     Node.js: JavaScript runtime environment, back-end development tool
     Express: Node.js web application framework, allows us to more easily handle requests and build a robust server.
     EJS: template engine for Node.js and web applications, used to render dynamic HTML
@@ -39,7 +39,7 @@ This is an Express.js MVC framework for building web applications.
     Bootstrap: front-end CSS framework, used for building responsive and mobile-first web applications
 
 **************************
-** Instructions to Run  **
+    Instructions to Run
 **************************
     Clone the repository
     Install dependencies using npm install
