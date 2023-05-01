@@ -1,5 +1,5 @@
 const path = require('path');
-const {load_helpers} = require('../../application/configurations/setConfig');
+const {load_helpers} = require('../../application/configurations/Main');
 
 const helpers = {};
 
@@ -9,7 +9,7 @@ const helpers = {};
 for(let i = 0; i < load_helpers.length; i++) {
 
     const helperName = load_helpers[i];
-    const helper = require(path.join(__dirname,'..','helpers', helperName));
+    const helper = require(path.join(__dirname,'..','..','application','helpers', helperName));
     helpers[helperName] = helper; 
 }
 

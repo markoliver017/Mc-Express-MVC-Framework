@@ -5,7 +5,7 @@ const router = express.Router();
 *  directly to browser without setting configuarations on their routes */
 const controllers = require('./Autoload_Controllers');
 /* Loads all Users customize routes configurations */
-const routes = require('../../application/configurations/routesConfig');
+const routes = require('../../application/configurations/Custom_Routes');
 /* Loads needed utility functions */
 const { util_route } = require("./Framework_Utils");
 
@@ -50,8 +50,8 @@ router.all("*", (req, res, next) => {
         controller[methodName](req, res, next);
 
     /* Catch all http request url/path and check if the controller/method exist
-     for all the available controller under Controllers folder if no methods inputs
-     the controller looks automatically on the index method 'localhost:port/Controller/method'
+    * for all the available controller under Controllers folder if no methods inputs
+    * the controller looks automatically on the index method 'localhost:port/Controller/method'
     */
     } else if(util_route.isRouteExist(controller[methodName]) == "success") {
         controller[methodName](req, res, next);

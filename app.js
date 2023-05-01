@@ -1,11 +1,11 @@
-const {port, mySession } = require('./application/configurations/setConfig');
-const flashMessages = require('./system/middlewares/flash_session');
+const {port, mySession } = require('./application/configurations/Main');
+const flashMessages = require('./system/middlewares/Flash_Session');
 const express = require('express');
 const app = express();
 const routes = require('./system/utilities/Routes');
 const session = require('express-session');
 const bodyParser = require('body-parser');
-const profiler = require('./system/middlewares/profiler');
+const profiler = require('./system/middlewares/Profiler');
 
 /* system required module to run form/post methods */
 app.use(session(mySession));
